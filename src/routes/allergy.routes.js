@@ -3,5 +3,6 @@ import { addAllergy } from "../controllers/allergy.controller.js";
 import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const router = Router();
-router.post("/", addAllergy);
+router.post("/",authMiddleware, addAllergy);
 export default router;
+
